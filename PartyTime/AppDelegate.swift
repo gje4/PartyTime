@@ -8,6 +8,11 @@
 
 import UIKit
 import CoreData
+import Fabric
+import MoPub
+import TwitterKit
+
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,10 +21,61 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+//        // Initialize Parse.
+//        [Parse setApplicationId:@"W06PhkRrgZwjdhLb4aQsZEOswQ5fswBnmnrKgvTu"
+////        clientKey:@"icUhjExVlMrwUTSw63EIEdlguw55d6QJaLB9RIDX"];
+//        
+//        // [Optional] Track statistics around application opens.
+//        [PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)];
+        
+        Parse.setApplicationId("W06PhkRrgZwjdhLb4aQsZEOswQ5fswBnmnrKgvTu", clientKey: "icUhjExVlMrwUTSw63EIEdlguw55d6QJaLB9RIDX")
+        PFFacebookUtils.initializeFacebook()
+        
+        //twitter
+        Fabric.with([MoPub()])
+        Fabric.with([MoPub(), Twitter()])
+
+        
+//determine if it is a new user or a logged in user
+            //store in parse and locally
+        var storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        var initialViewController:UIViewController
+        
+        if currentUser() != nil {
+            //transistion style
+            initialViewController = pageController
+            
+//            initialViewController = storyboard.instantiateViewControllerWithIdentifier("PageController") as UIViewController
+            println("returning user")
+            
+        }
+        //else pull up login
+        else {
+            
+
+                initialViewController = storyboard.instantiateViewControllerWithIdentifier("LoginViewController") as UIViewController
+
+            }
+        
+        //update windows so it knows whats up
+        self.window?.rootViewController = initialViewController
+        self.window?.makeKeyAndVisible()
+        
+        
+        //test object to save in parse
+//        let testObject = PFObject(className: "TestObject")
+//        testObject["foo"] = "bar"
+//        testObject.save()
+
+        
         return true
     }
 
+    //functiong to send data to parse and fb
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject?) -> Bool {
+        return FBAppCall.handleOpenURL(url, sourceApplication: sourceApplication, withSession: PFFacebookUtils.session())
+    }
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
@@ -35,12 +91,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidBecomeActive(application: UIApplication) {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        FBAppCall.handleDidBecomeActiveWithSession(PFFacebookUtils.session())
     }
 
     func applicationWillTerminate(application: UIApplication) {
-        // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-        // Saves changes in the application's managed object context before the application terminates.
+        PFFacebookUtils.session().close()
+
         self.saveContext()
     }
 
