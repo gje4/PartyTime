@@ -10,3 +10,9 @@
 #import <Parse/Parse.h>
 #import <ParseFacebookUtils/PFFacebookUtils.h>
 #import "FacebookSDK/FacebookSDK.h"
+
+#import <MobileAppTracker/MobileAppTracker.h>
+#import <AdSupport/AdSupport.h>
+#import "JSQMessagesViewController/JSQMessages.h"
+
+#import <Firebase/Firebase.h>

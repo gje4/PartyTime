@@ -32,6 +32,11 @@ class LoginViewController: UIViewController {
 
     
     @IBAction func pressedFBLogin(sender: UIButton) {
+        
+
+        func loginComplete() {
+            MobileAppTracker.measureAction("login");
+        }
         PFFacebookUtils.logInWithPermissions(["public_profile",
             "user_about_me", "user_birthday"], block: {
                 user, error in

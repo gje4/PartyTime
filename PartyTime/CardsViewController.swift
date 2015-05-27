@@ -26,6 +26,10 @@ class CardsViewController: UIViewController, SwipeViewDelegate {
     let backCardTopMargin: CGFloat = 10
     @IBOutlet weak var cardStackView: UIView!
     
+    @IBOutlet weak var nahButton: UIButton!
+    
+    @IBOutlet weak var yahButton: UIButton!
+    
     
     //vars
     var backCard: Card?
@@ -38,7 +42,12 @@ class CardsViewController: UIViewController, SwipeViewDelegate {
         
         //back ground
         cardStackView.backgroundColor = UIColor.clearColor()
+        //image for no button
+        nahButton.setImage(UIImage(named: "nah-button-pressed"), forState: UIControlState.Highlighted)
+        //image for yes button
+        yahButton.setImage(UIImage(named: "yah-button-pressed"), forState: UIControlState.Highlighted)
 
+        
         //use frame func to add back card slighlt off the cardstack view
 //        backCard = SwipeView(frame: createCardFrame(backCardTopMargin))
 //refactor to use card
@@ -104,6 +113,23 @@ override func viewWillAppear(animated: Bool) {
     
 
 
+    @IBAction func nahButtonPressed(sender: UIButton) {
+        //check front car exist
+        if let card = frontCard {
+            card.swipeView.swipe(SwipeView.Direction.Left)
+        }
+        
+        
+        
+    }
+    
+    @IBAction func yahButtonPressed(sender: UIButton) {
+        //check front car exist
+        if let card = frontCard {
+            card.swipeView.swipe(SwipeView.Direction.Right)
+        }
+    }
+    
     
     //helper func (when card and swipe where combined)
     
@@ -172,6 +198,9 @@ override func viewWillAppear(animated: Bool) {
         //get value from card then remove it
         if let frontCard = frontCard {
             frontCard.swipeView.removeFromSuperview()
+            //save skip
+            saveSkip(frontCard.user)
+            
             switchCards()
         }
     }
@@ -180,6 +209,8 @@ override func viewWillAppear(animated: Bool) {
         println("swipe Right")
         if let frontCard = frontCard {
             frontCard.swipeView.removeFromSuperview()
+            saveLike(frontCard.user)
+
             switchCards()
 
         }

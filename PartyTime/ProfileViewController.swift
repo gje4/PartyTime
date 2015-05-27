@@ -35,8 +35,11 @@ class ProfileViewController: UIViewController {
         //        //navigation for the bar button
         //            navigationItem.setRightBarButtonItem(rightBarButtonItem, animated: true)
         
-        let leftBarButtonItem = UIBarButtonItem(image: UIImage (named: "nav-back-button"), style: UIBarButtonItemStyle.Plain,
-            target: self, action: "goToProfile:")
+        
+        //navigation
+        navigationItem.titleView = UIImageView(image: UIImage(named: "chat-header"))
+        let leftBarButtonItem = UIBarButtonItem(image: UIImage(named:"nav-back-button"), style:
+            UIBarButtonItemStyle.Plain, target: self, action:"goToPreviousVC:")
         navigationItem.setLeftBarButtonItem(leftBarButtonItem, animated: true)
         
     }

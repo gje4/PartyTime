@@ -12,7 +12,9 @@ import Fabric
 import MoPub
 import TwitterKit
 
-
+//mat keys
+let Mat_Advertiser_Id   = "177134"
+let Mat_Conversion_Key  = "49cee6203a0578a6e17e9dc860bb4d9"
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,18 +24,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 //        // Initialize Parse.
-//        [Parse setApplicationId:@"W06PhkRrgZwjdhLb4aQsZEOswQ5fswBnmnrKgvTu"
-////        clientKey:@"icUhjExVlMrwUTSw63EIEdlguw55d6QJaLB9RIDX"];
-//        
+        Parse.setApplicationId("W06PhkRrgZwjdhLb4aQsZEOswQ5fswBnmnrKgvTu",
+        clientKey:"icUhjExVlMrwUTSw63EIEdlguw55d6QJaLB9RIDX")
+        
 //        // [Optional] Track statistics around application opens.
 //        [PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)];
         
-        Parse.setApplicationId("W06PhkRrgZwjdhLb4aQsZEOswQ5fswBnmnrKgvTu", clientKey: "icUhjExVlMrwUTSw63EIEdlguw55d6QJaLB9RIDX")
+        //MAt
+        MobileAppTracker.initializeWithMATAdvertiserId(Mat_Advertiser_Id, MATConversionKey:Mat_Conversion_Key);
+        MobileAppTracker.setAppleAdvertisingIdentifier(ASIdentifierManager.sharedManager().advertisingIdentifier, advertisingTrackingEnabled: ASIdentifierManager.sharedManager().advertisingTrackingEnabled);
+        
+        MobileAppTracker.setDebugMode(true);
+        MobileAppTracker.setAllowDuplicateRequests(true);
+
+        
         PFFacebookUtils.initializeFacebook()
         
         //twitter
         Fabric.with([MoPub()])
         Fabric.with([MoPub(), Twitter()])
+        
+
 
         
 //determine if it is a new user or a logged in user
@@ -92,6 +103,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidBecomeActive(application: UIApplication) {
         FBAppCall.handleDidBecomeActiveWithSession(PFFacebookUtils.session())
+        
+        MobileAppTracker.measureSession();
     }
 
     func applicationWillTerminate(application: UIApplication) {

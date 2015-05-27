@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>CDB2B64F-DA99-4DDA-89F5-A5D1D68B5611</string>
+	<key>IDESourceControlProjectName</key>
+	<string>PartyTime</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>521102B7C3C96E291757FC7B8107732D642C8B87</key>
+		<string>https://github.com/gje4/PartyTime.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>PartyTime.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>521102B7C3C96E291757FC7B8107732D642C8B87</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/gje4/PartyTime.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>521102B7C3C96E291757FC7B8107732D642C8B87</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>521102B7C3C96E291757FC7B8107732D642C8B87</string>
+			<key>IDESourceControlWCCName</key>
+			<string>PartyTime</string>
+		</dict>
+	</array>
+</dict>
+</plist>

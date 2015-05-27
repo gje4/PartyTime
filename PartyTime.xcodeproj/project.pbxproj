@@ -22,6 +22,16 @@
 		65035E8D1AD4319200EADC27 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 65035E8C1AD4319200EADC27 /* libsqlite3.dylib */; };
 		65035E901AD5688C00EADC27 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65035E8F1AD5688C00EADC27 /* LoginViewController.swift */; };
 		65035E931AD5987200EADC27 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65035E921AD5987200EADC27 /* User.swift */; };
+		6529D6F01AF014EE00AC9E21 /* MobileAppTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6529D6EF1AF014EE00AC9E21 /* MobileAppTracker.framework */; };
+		6529D6F21AF0154500AC9E21 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6529D6F11AF0154500AC9E21 /* iAd.framework */; };
+		6529D6F41AF0154F00AC9E21 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6529D6F31AF0154F00AC9E21 /* CoreTelephony.framework */; };
+		6529D77E1AF3D8EA00AC9E21 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6529D77D1AF3D8EA00AC9E21 /* Match.swift */; };
+		658387211AFA83C400CC47EF /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 658387201AFA83C400CC47EF /* libicucore.dylib */; };
+		658387231AFA83D600CC47EF /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 658387221AFA83D600CC47EF /* libc++.dylib */; };
+		658387251AFA840600CC47EF /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658387241AFA840600CC47EF /* Message.swift */; };
+		659783B31B00FDE20024295B /* shows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659783B21B00FDE20024295B /* shows.swift */; };
+		659783BF1B0123570024295B /* ShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659783BE1B0123570024295B /* ShowViewController.swift */; };
+		65C9D0461AF816DF002ED73C /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65C9D0451AF816DF002ED73C /* ChatViewController.swift */; };
 		65CE31F41ADD86AE00C8338C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CE31F31ADD86AE00C8338C /* ProfileViewController.swift */; };
 		65CE31F61ADEF53F00C8338C /* TicketsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CE31F51ADEF53F00C8338C /* TicketsViewController.swift */; };
 		65CE31FC1AE582D900C8338C /* MoPub.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65CE31F91AE582D900C8338C /* MoPub.framework */; };
@@ -29,6 +39,8 @@
 		65CE31FE1AE582D900C8338C /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65CE31FB1AE582D900C8338C /* Fabric.framework */; };
 		65CE32011AE583B500C8338C /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65CE31FF1AE583B500C8338C /* TwitterKit.framework */; };
 		65CE32021AE583B500C8338C /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 65CE32001AE583B500C8338C /* TwitterKitResources.bundle */; };
+		65CE32581AE994AC00C8338C /* MatchsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CE32571AE994AC00C8338C /* MatchsTableViewController.swift */; };
+		65CE325A1AE9955000C8338C /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CE32591AE9955000C8338C /* UserCell.swift */; };
 		65DB46931ACB30CD00EB93EC /* SwipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DB46921ACB30CD00EB93EC /* SwipeView.swift */; };
 		65DB46961ACC3DB800EB93EC /* CardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65DB46951ACC3DB800EB93EC /* CardsViewController.swift */; };
 		65EA6BD91AC9B17F00D1076C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EA6BD81AC9B17F00D1076C /* AppDelegate.swift */; };
@@ -39,7 +51,7 @@
 		65EA6BE61AC9B17F00D1076C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65EA6BE41AC9B17F00D1076C /* LaunchScreen.xib */; };
 		65EA6BF21AC9B17F00D1076C /* PartyTimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EA6BF11AC9B17F00D1076C /* PartyTimeTests.swift */; };
 		65EA6BFD1AC9B1E300D1076C /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65EA6BFC1AC9B1E300D1076C /* CardView.swift */; };
-		7F39F07721B470D672D722EC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A4EE95554045EC8EAD1449B /* libPods.a */; };
+		8D71AAF27E4EFFF03F1115C8 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4308719C9E58B82E71791C5C /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,7 +65,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4A4EE95554045EC8EAD1449B /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4308719C9E58B82E71791C5C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		65035E741AD4311900EADC27 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		65035E751AD4311900EADC27 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
 		65035E781AD4313200EADC27 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -70,6 +82,16 @@
 		65035E8E1AD431FE00EADC27 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		65035E8F1AD5688C00EADC27 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		65035E921AD5987200EADC27 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		6529D6EF1AF014EE00AC9E21 /* MobileAppTracker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MobileAppTracker.framework; sourceTree = "<group>"; };
+		6529D6F11AF0154500AC9E21 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		6529D6F31AF0154F00AC9E21 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		6529D77D1AF3D8EA00AC9E21 /* Match.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
+		658387201AFA83C400CC47EF /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		658387221AFA83D600CC47EF /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		658387241AFA840600CC47EF /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		659783B21B00FDE20024295B /* shows.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = shows.swift; sourceTree = "<group>"; };
+		659783BE1B0123570024295B /* ShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowViewController.swift; sourceTree = "<group>"; };
+		65C9D0451AF816DF002ED73C /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		65CE31F31ADD86AE00C8338C /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		65CE31F51ADEF53F00C8338C /* TicketsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketsViewController.swift; sourceTree = "<group>"; };
 		65CE31F91AE582D900C8338C /* MoPub.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MoPub.framework; sourceTree = "<group>"; };
@@ -77,6 +99,8 @@
 		65CE31FB1AE582D900C8338C /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		65CE31FF1AE583B500C8338C /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
 		65CE32001AE583B500C8338C /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = "<group>"; };
+		65CE32571AE994AC00C8338C /* MatchsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchsTableViewController.swift; sourceTree = "<group>"; };
+		65CE32591AE9955000C8338C /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		65DB46921ACB30CD00EB93EC /* SwipeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeView.swift; sourceTree = "<group>"; };
 		65DB46951ACC3DB800EB93EC /* CardsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardsViewController.swift; sourceTree = "<group>"; };
 		65EA6BD31AC9B17F00D1076C /* PartyTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PartyTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,6 +124,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				658387231AFA83D600CC47EF /* libc++.dylib in Frameworks */,
+				658387211AFA83C400CC47EF /* libicucore.dylib in Frameworks */,
+				6529D6F41AF0154F00AC9E21 /* CoreTelephony.framework in Frameworks */,
+				6529D6F21AF0154500AC9E21 /* iAd.framework in Frameworks */,
 				65035E8D1AD4319200EADC27 /* libsqlite3.dylib in Frameworks */,
 				65035E8B1AD4318900EADC27 /* libz.dylib in Frameworks */,
 				65035E891AD4318000EADC27 /* SystemConfiguration.framework in Frameworks */,
@@ -115,8 +143,9 @@
 				65035E771AD4311900EADC27 /* ParseFacebookUtils.framework in Frameworks */,
 				65CE32011AE583B500C8338C /* TwitterKit.framework in Frameworks */,
 				65035E761AD4311900EADC27 /* Parse.framework in Frameworks */,
+				6529D6F01AF014EE00AC9E21 /* MobileAppTracker.framework in Frameworks */,
 				65CE31FC1AE582D900C8338C /* MoPub.framework in Frameworks */,
-				7F39F07721B470D672D722EC /* libPods.a in Frameworks */,
+				8D71AAF27E4EFFF03F1115C8 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,6 +171,11 @@
 		65035E731AD430FB00EADC27 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				658387221AFA83D600CC47EF /* libc++.dylib */,
+				658387201AFA83C400CC47EF /* libicucore.dylib */,
+				6529D6F31AF0154F00AC9E21 /* CoreTelephony.framework */,
+				6529D6F11AF0154500AC9E21 /* iAd.framework */,
+				6529D6EF1AF014EE00AC9E21 /* MobileAppTracker.framework */,
 				65CE31FF1AE583B500C8338C /* TwitterKit.framework */,
 				65CE32001AE583B500C8338C /* TwitterKitResources.bundle */,
 				65CE31F91AE582D900C8338C /* MoPub.framework */,
@@ -160,7 +194,7 @@
 				65035E781AD4313200EADC27 /* AudioToolbox.framework */,
 				65035E741AD4311900EADC27 /* Parse.framework */,
 				65035E751AD4311900EADC27 /* ParseFacebookUtils.framework */,
-				4A4EE95554045EC8EAD1449B /* libPods.a */,
+				4308719C9E58B82E71791C5C /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -169,6 +203,9 @@
 			isa = PBXGroup;
 			children = (
 				65035E921AD5987200EADC27 /* User.swift */,
+				6529D77D1AF3D8EA00AC9E21 /* Match.swift */,
+				658387241AFA840600CC47EF /* Message.swift */,
+				659783B21B00FDE20024295B /* shows.swift */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -176,11 +213,14 @@
 		65DB46941ACC3D6B00EB93EC /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				659783BE1B0123570024295B /* ShowViewController.swift */,
 				65EA6BDD1AC9B17F00D1076C /* ViewController.swift */,
 				65035E8F1AD5688C00EADC27 /* LoginViewController.swift */,
 				65CE31F31ADD86AE00C8338C /* ProfileViewController.swift */,
 				65CE31F51ADEF53F00C8338C /* TicketsViewController.swift */,
 				65DB46951ACC3DB800EB93EC /* CardsViewController.swift */,
+				65CE32571AE994AC00C8338C /* MatchsTableViewController.swift */,
+				65C9D0451AF816DF002ED73C /* ChatViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -251,6 +291,7 @@
 			isa = PBXGroup;
 			children = (
 				65EA6BFC1AC9B1E300D1076C /* CardView.swift */,
+				65CE32591AE9955000C8338C /* UserCell.swift */,
 				65DB46921ACB30CD00EB93EC /* SwipeView.swift */,
 			);
 			name = Views;
@@ -416,6 +457,13 @@
 				65EA6BFD1AC9B1E300D1076C /* CardView.swift in Sources */,
 				65CE31F61ADEF53F00C8338C /* TicketsViewController.swift in Sources */,
 				65CE31F41ADD86AE00C8338C /* ProfileViewController.swift in Sources */,
+				65CE325A1AE9955000C8338C /* UserCell.swift in Sources */,
+				6529D77E1AF3D8EA00AC9E21 /* Match.swift in Sources */,
+				659783BF1B0123570024295B /* ShowViewController.swift in Sources */,
+				659783B31B00FDE20024295B /* shows.swift in Sources */,
+				65C9D0461AF816DF002ED73C /* ChatViewController.swift in Sources */,
+				65CE32581AE994AC00C8338C /* MatchsTableViewController.swift in Sources */,
+				658387251AFA840600CC47EF /* Message.swift in Sources */,
 				65DB46931ACB30CD00EB93EC /* SwipeView.swift in Sources */,
 				65EA6BDC1AC9B17F00D1076C /* PartyTime.xcdatamodeld in Sources */,
 			);
@@ -541,11 +589,13 @@
 			baseConfigurationReference = 6E299F0CDE483F2C9D2F2F4B /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = PartyTime/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "PartyTime/Bridging-Header.h";
@@ -557,11 +607,13 @@
 			baseConfigurationReference = FEBAFE1EDC013EFBE6BC8237 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = PartyTime/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "PartyTime/Bridging-Header.h";

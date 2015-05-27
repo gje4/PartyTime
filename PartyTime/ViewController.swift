@@ -20,13 +20,19 @@ class ViewController: UIPageViewController, UIPageViewControllerDataSource, MPAd
     // TODO: Replace this test id with your personal ad unit id
     var adView: MPAdView = MPAdView(adUnitId: "0fd404de447942edb7610228cb412614", size: MOPUB_BANNER_SIZE)
 
+    //call to change views
     let cardsVC: UIViewController! = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("CardsNavController") as UIViewController
     
-    let profileVC: UIViewController! = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("ProfileNavController") as UIViewController
+//let profileVC: UIViewController! = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("ProfileNavController") as UIViewController
+    let profileVC: UIViewController! = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("showNavController") as UIViewController
+
    
+    let matchesVC: UIViewController! = UIStoryboard(name:"Main" , bundle: nil).instantiateViewControllerWithIdentifier("MatchsNavController")as UIViewController
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+       //mopub
         self.adView.delegate = self
         self.adView.frame = CGRectMake(0, self.view.bounds.size.height - MOPUB_BANNER_SIZE.height,
             MOPUB_BANNER_SIZE.width, MOPUB_BANNER_SIZE.height)
@@ -70,6 +76,11 @@ class ViewController: UIPageViewController, UIPageViewControllerDataSource, MPAd
         switch viewController {
         case cardsVC:
             return profileVC
+        case profileVC:
+            return nil
+        case matchesVC:
+        return cardsVC
+
         default:
             return nil
             
@@ -80,8 +91,11 @@ class ViewController: UIPageViewController, UIPageViewControllerDataSource, MPAd
     //after
     func pageViewController(pageViewController: UIPageViewController, viewControllerAfterViewController viewController: UIViewController) -> UIViewController? {
         switch viewController {
+        case cardsVC:
+            return matchesVC
         case profileVC:
             return cardsVC
+            
         default:
             return nil
         }
