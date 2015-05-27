@@ -34,7 +34,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         MobileAppTracker.initializeWithMATAdvertiserId(Mat_Advertiser_Id, MATConversionKey:Mat_Conversion_Key);
         MobileAppTracker.setAppleAdvertisingIdentifier(ASIdentifierManager.sharedManager().advertisingIdentifier, advertisingTrackingEnabled: ASIdentifierManager.sharedManager().advertisingTrackingEnabled);
         
-        MobileAppTracker.setDebugMode(true);
+        MobileAppTracker.setDebugMode(false);
         MobileAppTracker.setAllowDuplicateRequests(true);
 
         

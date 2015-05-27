@@ -18,7 +18,7 @@ class ViewController: UIPageViewController, UIPageViewControllerDataSource, MPAd
  {
 
     // TODO: Replace this test id with your personal ad unit id
-    var adView: MPAdView = MPAdView(adUnitId: "0fd404de447942edb7610228cb412614", size: MOPUB_BANNER_SIZE)
+    var adView: MPAdView = MPAdView(adUnitId: "51b0c5cfdf01473a96c7d624160e325f", size: MOPUB_BANNER_SIZE)
 
     //call to change views
     let cardsVC: UIViewController! = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("CardsNavController") as UIViewController
@@ -33,13 +33,24 @@ class ViewController: UIPageViewController, UIPageViewControllerDataSource, MPAd
     override func viewDidLoad() {
         super.viewDidLoad()
        //mopub
+        
+        super.viewDidLoad()
         self.adView.delegate = self
         self.adView.frame = CGRectMake(0, self.view.bounds.size.height - MOPUB_BANNER_SIZE.height,
             MOPUB_BANNER_SIZE.width, MOPUB_BANNER_SIZE.height)
         self.view.addSubview(self.adView)
         self.adView.loadAd()
         
-
+        // Function for failed "loading" of an ad.
+        func adViewDidFailToLoadAd(view: MPAdView!) {
+            println("Failed to load ad")
+        }
+        func adViewDidLoadAd(view: MPAdView!) {
+            println("The ad loaded")
+        }
+        func viewControllerForPresentingModalView() -> UIViewController {
+            return self
+        }
         
         view.backgroundColor = UIColor.whiteColor()
         dataSource = self
@@ -55,6 +66,8 @@ class ViewController: UIPageViewController, UIPageViewControllerDataSource, MPAd
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+
+
     
     //view controller functions
     func goToNextVC() {
